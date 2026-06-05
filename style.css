@@ -1,6 +1,7 @@
 body {
-    font-family: Arial,sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 13px;
+    background-color: ;
     
 }
 .title {
@@ -14,8 +15,18 @@ body {
 .products-list {
     list-style: none;
     display: flex;
-    
-    
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    justify-content: center;
+}
+.product-card {
+    background-color: rgba(81, 80, 118, 0.1);
+    width: 340px;
+    border-radius: 13px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
 }
 
 .main-text {
