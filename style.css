@@ -50,3 +50,18 @@ span {
     font-weight: 400;
     font-size: 20px;
 }
+.tex-btn {
+    display: block;
+    background-color: #807e7e;
+    color: #f2eaea;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.tex-btn:hover {
+    background-color: #981804;
+}
