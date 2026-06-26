@@ -1,0 +1,108 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    background-color: #fff;
+    margin: 0;
+}
+.main-container {
+    min-width: 1200px;
+    margin: 0 auto;
+     padding-top: 220px;
+    background-image: url('img/bg\ 1@2x.png');
+    background-repeat: no-repeat;
+    background-position: 40% 210px;
+    background-size: 790px 697px; 
+}
+.title {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    margin: 320px auto 110px;
+    text-align: center;
+    color: rgba(81, 80, 118, 1);
+    
+}
+.products-list {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+    
+}
+.stars {
+     
+     color: #ffcc00; 
+     letter-spacing: 1px;
+}
+.product-card {
+
+    background-color:  rgba(81, 80, 118, 0.1) ;
+    width: 340px;
+    border-radius: 13px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+.product-image {
+    width: 290px;
+}
+  .products-list .product-card:first-child {
+  background-color: #f8f5e4; /* Нежный кремовый/золотистый фон */
+  border: 2px solid #dfb300; /* Красивая золотая рамка */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 25);
+}
+.products-list .product-card:first-child h2 {
+  color: #b58900; 
+}
+.product-card {
+   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+   cursor: pointer;
+}
+.product-card:hover {
+  transform: translateY(-30px); /* Карточка плавно приподнимается вверх */
+  box-shadow: 0 14px 28px rgba(16, 16, 16, 0.19); /* Тень становится объемнее */
+}
+.product-price-block {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-number {
+  display: flex; /* Включаем Flexbox */
+  align-items: center; /* Выравниваем звездочки и цифру по центру вертикали */
+  margin-top: 6px; /* Небольшой отступ сверху от h2 */
+  margin-bottom: 10px; /* Небольшой отступ снизу до описания */
+  font-size: 16px; /* Настройка размера текста */
+}
+
+.main-text {
+     color: rgba(81, 80, 118, 1);
+     font-size: 13px; 
+     line-height: 18px;
+}
+.composition-list {
+    color: rgba(81, 80, 118, 1);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+.composition-list > li{
+    margin: 5px;
+}
+.main-text price {
+ font-weight: 700;
+ font-size: 20px;
+}
+
+span {
+    color: rgba(81, 80, 118, 1);
+    font-weight: 400;
+    font-size: 20px;
+}
