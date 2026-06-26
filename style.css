@@ -47,6 +47,9 @@ body {
     box-sizing: border-box;
     border: 1px solid #e0e0e0;
 }
+.product-image {
+    width: 290px;
+}
   .products-list .product-card:first-child {
   background-color: #f8f5e4; /* Нежный кремовый/золотистый фон */
   border: 2px solid #dfb300; /* Красивая золотая рамка */
