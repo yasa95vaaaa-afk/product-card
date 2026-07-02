@@ -1,0 +1,137 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    background-color: #fff;
+    margin: 0;
+}
+.container {
+    width: 1110px;
+    margin: 0 auto;
+
+}
+.catalog_container {
+    background-image: url(/img/bg\ 1@2x.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-top: 220px;
+    
+}
+
+/* Блок каталога */
+.catalog {
+    min-width: 1200px;
+    margin: 0 auto;
+    padding-top: 220px;
+    background-image: url('img/bg bg 1@2x.png'); 
+    background-repeat: no-repeat;
+    background-position: 40% 210px;
+    background-size: 790px 697px; 
+}
+
+.catalog__title {
+     margin-top: 0;
+    margin-bottom: 49px;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    text-align: center;
+    color: rgba(81, 80, 118, 1);
+    
+}
+
+.catalog__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1100px;
+    list-style: none;
+}
+
+/* Блок карточки товара */
+.product-card {
+    background-color:#F7F7FA;
+    width: 340px;
+    border-radius: 13px;
+    padding: 25px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    
+    /* Флекс для выравнивания нижней цены */
+    display: flex;
+    flex-direction: column;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Элементы карточки и управление отступами (margin-bottom) */
+.product-card__image {
+    width: 290px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.product-card__category {
+    color: rgba(81, 80, 118, 0.6);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(81, 80, 118, 1);
+    margin: 0 0 12px 0;
+}
+
+.product-card__description {
+    color: rgba(81, 80, 118, 1);
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+}
+
+.product-card__compound-label {
+    color: rgba(81, 80, 118, 1);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.product-card__composition {
+    color: rgba(81, 80, 118, 1);
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 0 20px 0;
+    padding-left: 20px;
+}
+
+.product-card__composition > li {
+    margin: 4px 0;
+}
+
+/* Нижний блок с ценой */
+.product-card__price-block {
+    margin-top: auto; /* Прижимает блок к самому низу карточки */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+  
+}
+
+.product-card__price-text {
+    color: rgba(81, 80, 118, 1);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.product-card__price-value {
+    color: rgba(81, 80, 118, 1);
+    font-weight: 700;
+    font-size: 16px;
+}
