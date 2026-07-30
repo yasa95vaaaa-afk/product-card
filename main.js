@@ -12,13 +12,12 @@ chengeColorAllCardButton.addEventListener('click', () => {
 
 //Покраска первой карточки
 const firstProductCard = document.querySelector('.product-card');
-const chengeColorFirstCardButton = document.querySelector ('#change-color-first-card');
+const chengeColorFirstCardButton = document.querySelector('#change-color-first-card');
 
 
 chengeColorFirstCardButton.addEventListener('click', () => {
-    productCards.forEach((car) => car.style.backgroundColor = blueColorHash)
-   
-})
+  firstProductCard.style.backgroundColor = blueColorHash;
+   });
 
 //Открыть страницу Google
 
@@ -27,11 +26,9 @@ openGoogleButton.addEventListener('click', openGoogle)
 
 
 function openGoogle () {
-    const answer = confirm ('Вы действительно хотите открыть Google')
+    const answer = confirm ('Вы действительно хотите открыть Google');
    if (answer === true) {
    window.open('https://google.com')
-    } else {
-    return;
    }
 }
 
