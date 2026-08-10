@@ -21,9 +21,9 @@ console.log(carDetails);
 
 //5
 function checkMaxSpeed(carObject) {
-  
-  if (!("maxSpeed" in carObject)) {
-  }
+    if (!("maxSpeed" in carObject)) {
+        carObject.maxSpeed = 200; 
+    }
 }
 checkMaxSpeed(carDetails);
 console.log("Задание 5 (после проверки скорости):", carDetails);
