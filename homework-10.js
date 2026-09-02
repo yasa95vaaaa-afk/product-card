@@ -5,7 +5,7 @@ function createProductCardTemplate(product) {
     .join('');
  return `
     <li class="product-card">
-      <img src="${product.img}" alt="${product.alt}" width="250" />
+      <img src="${product.img}" alt="${product.alt}"/>
       <span>${product.category}</span>
       <h2>${product.title}</h2>
       <p class="main-text description">${product.description}</p>
@@ -21,8 +21,6 @@ function createProductCardTemplate(product) {
  ` ;
 }
 
-const productsListHtml = products.map(product => createProductCardTemplate(product)).join('');
-console.log("HTML-код всех карточек по шаблону:", productsListHtml);
 
 const productDescriptionsMap = products.reduce((accumulator, currentProduct) => {
   accumulator[currentProduct.title] = currentProduct.description;
@@ -34,9 +32,9 @@ console.log("Результат работы .reduce():", productDescriptionsMap
 // Функция 1: Запрашивает количество карточек и проверяет ввод 
 function getProductsCount() {
   const userInput = prompt("Сколько карточек отобразить? От 1 до 5");
-  const count = parseInt(userInput, 10);
+  const count = Number(userInput);
   
-  if (isNaN(count) || count < 1 || count > 5) {
+  if (!Number.isInteger(count) || count < 1 || count > 5 ){
     alert("Ошибка ввода! Пожалуйста, введите число от 1 до 5. Покажем все 5 карточек.");
     return 5; 
   }
