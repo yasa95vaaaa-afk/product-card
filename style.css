@@ -1,0 +1,301 @@
+*{
+    box-sizing: border-box;
+     margin: 0;
+    padding: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+main {
+  padding: 60px 40px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  background: #3a3a3a;
+  padding: 40px 40px 25px;
+  border-radius: 12px;
+  margin: 0 20px 20px;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.footer__col {
+  min-width: 0;
+}
+
+.footer__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.footer__title--center {
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin: 0 0 16px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer__social-link {
+  color: #fff;
+  display: inline-flex;
+}
+
+/* Subscribe form */
+
+.footer__subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+}
+
+.subscribe-form__input {
+  border: none;
+  outline: none;
+  padding: 10px 14px;
+  font-size: 13px;
+  flex: 1;
+  color: #333;
+  min-width: 0;
+}
+
+.subscribe-form__divider {
+  width: 1px;
+  height: 20px;
+  background: #ccc;
+}
+
+.subscribe-form__button {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.subscribe-form__button:hover {
+  color: #000;
+}
+
+.subscribe-form__error {
+  color: #ff8080;
+  font-size: 12px;
+  min-height: 16px;
+  margin: 8px 0 0;
+}
+
+/* Links */
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__list li {
+  margin-bottom: 8px;
+}
+
+.footer__list a {
+  color: #cfcfcf;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer__list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Bottom */
+
+.footer__divider {
+  border: none;
+  border-top: 1px solid #555;
+  width: 60px;
+  margin: 30px auto 15px;
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer__brand,
+  .footer__links {
+    align-items: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+
+  .footer__subscribe {
+    order: -1;
+  }
+}
+
+/* ===== BUTTON ===== */
+
+.btn-primary {
+  background: #2f6fed;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #255ac9;
+}
+
+/* ===== MODAL ===== */
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.overlay.overlay-showed {
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2b2b2b;
+  color: #fff;
+  padding: 30px 28px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 101;
+}
+
+.modal.modal-showed {
+  display: block;
+}
+
+.modal__close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  color: #ccc;
+}
+
+.modal__title {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Register form */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.register-form label {
+  font-size: 13px;
+  color: #cfcfcf;
+  margin-top: 8px;
+}
+
+.register-form input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.register-form input:focus {
+  border-color: #2f6fed;
+}
+
+.register-form__error {
+  color: #ff8080;
+  font-size: 13px;
+  min-height: 18px;
+  margin: 10px 0 0;
+}
+.register-form .btn-primary {
+  margin-top: 16px;
+  width: 100%;
+}
