@@ -150,7 +150,7 @@ main {
   text-decoration: underline;
 }
 
-/* Bottom */
+
 
 .footer__divider {
   border: none;
@@ -186,7 +186,7 @@ main {
   }
 }
 
-/* ===== BUTTON ===== */
+
 
 .btn-primary {
   background: #2f6fed;
@@ -203,7 +203,7 @@ main {
   background: #255ac9;
 }
 
-/* ===== MODAL ===== */
+
 
 .overlay {
   display: none;
