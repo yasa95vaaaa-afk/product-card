@@ -24,7 +24,7 @@ class Drink {
         this.#temperature = temperature;
     }
 
-    prepare() {
+    #prepare() {
         throw new Error("Метод prepare() должен быть переопределён");
     }
 
@@ -67,27 +67,27 @@ class Tea extends Drink {
     }
 
     getInfo() {
-          return `${super.getInfo()}, вкус: ${this.flavor}`;
+          return `${super.getInfo()}, вкус: ${this.teaType}`;
     }
 }
 
 
 class Coffee extends Drink {
-    constructor(name, size, price, temperature, beansType, milk) {
+    constructor(name, size, price, temperature, beansType, withMilk) {
         super(name, size, price, temperature);
         this.beansType = beansType;
-        this.milk = milk;
+        this.withMilk = withMilk;
     }
 
   prepare() {
         console.log(`Готовим кофе: ${this.name}`);
         console.log(`Зёрна: ${this.beansType}`);
-        console.log(`Молоко: ${this.milk ? "да" : "нет"}`);
+        console.log(`Молоко: ${this.withMilk ? "да" : "нет"}`);
         this.setTemperature(70);
     }
 
     getInfo() {
-        return `${super.getInfo()}, зёрна: ${this.beansType}, молоко: ${this.milk ? "да" : "нет"}`;
+        return `${super.getInfo()}, зёрна: ${this.beansType}, молоко: ${this.withMilk ? "да" : "нет"}`;
     }
 }
 
