@@ -1,0 +1,47 @@
+
+.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Оверлей сверху УБРАЛИ. Теперь модалка сама внутри себя содержит темный фон -->
+
+  <button class="button" id="registration-button">Регистрация</button>
+  <button class="button" id="auth-button">Аутентификация</button>
+
+  <!-- Каждая модалка теперь — это ОБОЛОЧКА (оверлей), внутри которой лежит контент -->
+  
+  <!-- Модалка 1: Регистрация -->
+  <div id="registration-modal" class="modal-wrapper">
+    <div class="modal-content">
+      <!-- Убран id, оставлен только класс -->
+      <button class="modal-close-button">X</button> 
+      <h1>Регистрация</h1>
+      <span>Пароль</span>
+      <span>Повторите пароль</span>
+      <span>Логин</span>
+      <span>Почта</span>
+    </div>
+  </div>
+
+  <!-- Модалка 2: Аутентификация -->
+  <div id="auth-modal" class="modal-wrapper">
+    <div class="modal-content">
+      <!-- Убран id, оставлен только класс -->
+      <button class="modal-close-button">X</button>
+      <h1>Аутентификация</h1>
+      <p>Логин</p>
+      <p>Пароль</p>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+  <script src="doma.js"></script>
+</body>
+</html>
