@@ -1,17 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Чтобы паддинги не раздували элементы */
+  box-sizing: border-box;
 }
 
 .button {
   display: block;
-  width: 150px; /* Немного увеличим, чтобы текст помещался */
+  width: 150px;
   height: 40px;
   margin: 10px;
 }
 
-/* Кнопка закрытия внутри модалки */
+
 .modal-close-button {
   display: block;
   position: absolute;
@@ -24,32 +24,32 @@
   font-weight: bold;
 }
 
-/* ВНЕШНЯЯ ОБЕРТКА (Она же бывший глобальный оверлей) */
+
 .modal-wrapper {
-  position: fixed;       /* Фиксируем на одном месте при скролле */
+  position: fixed;       
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Темный полупрозрачный фон */
-  display: none;         /* По умолчанию скрыта */
-  justify-content: center; /* Центрируем белое окно по горизонтали */
-  align-items: center;    /* Центрируем белое окно по вертикали */
-  z-index: 1000;         /* Чтобы модалка была поверх всего сайта */
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: none;         
+  justify-content: center; 
+  align-items: center;    
+  z-index: 1000;         
 }
 
-/* ВНУТРЕННЕЕ БЕЛОЕ ОКНО С КОНТЕНТОМ */
+
 .modal-content {
-  position: relative;    /* Нужно, чтобы кнопка закрытия позиционировалась относительно этого окна */
-  width: 90%;            /* Адаптивно для мобилок */
-  max-width: 500px;      /* Ограничение по ширине на десктопе */
+  position: relative;    
+  width: 90%;            
+  max-width: 500px;     
   padding: 40px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* КЛАСС ДЛЯ ПОКАЗА МОДАЛКИ (добавляется через JS) */
+
 .modal-wrapper.modal-showed {
-  display: flex;         /* Включаем flex-центpирование при показе */
+  display: flex;         
 }
