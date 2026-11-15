@@ -1,0 +1,19 @@
+
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Юсуф",
+      "surname": "Исаев",
+      "email": "usuf@example.com",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "name": "Амира",
+      "surname": "Саидава",
+      "email": "ami@example.com",
+      "age": 28
+    }
+  ]
+}
