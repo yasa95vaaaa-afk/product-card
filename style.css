@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Arial', sans-serif; 
+}
+
+
+body {
+    font-size: 13px;
+    background-color: #fff;
+    color: rgba(81, 80, 118, 1);
+}
+
+/* Шапка сайта */
+.header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header__container {
+    max-width: 1200px; /* Заменено с min-width для адаптивности */
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.header__logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.header__logo-text {
+     margin: 0;
+     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px; /* Немного уменьшили для изящности */
+    color: #333333;
+    text-align: center; /* Центрируем текст относительно картинки */
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.header__menu {
+    display: flex;
+    gap: 25px;
+}
+
+.header__menu-link {
+    text-decoration: none;
+    color: #555555;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header__menu-link:hover {
+   color: #f8c808;
+   cursor: pointer;
+}
+
+.header__cart-btn {
+    background-color: #1c1b1b; 
+    color: #ffffff; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px;
+    font-size: 15px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    cursor: pointer;
+}
+
+.header__cart-btn:hover {
+    background-color: #f9b90b;
+}
+
+.header__cart-btn:active {
+    transform: scale(0.97);
+}
+
+/* Главный контейнер каталога */
+.catalog-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    /* Фоновые одуванчики как на макете */
+    background-image: url('img/bg bg 1@2x.png'); 
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain; 
+}
+
+/* Заголовок "Выбери свой продукт" */
+.catalog-title {
+    margin-bottom: 50px;
+    font-size: 48px; /* Уменьшено для соответствия макету */
+    font-weight: 400;
+    text-align: center;
+    color: rgba(81, 80, 118, 1);
+}
+
+/* Сетка карточек (Оптимизировано под Flexbox/Grid) */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Карточка товара */
+.product-card {
+    background-color: #F7F7FA;
+    width: 340px;
+    border-radius: 13px;
+    padding: 25px;
+    /* Вместо border ставим легкую тень, либо оставляем border по дизайну */
+    border: 1px solid #ededf2; 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(81, 80, 118, 0.08);
+}
+
+/* Элементы карточки */
+.product-card__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.product-card__category {
+    color: rgba(81, 80, 118, 0.6);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.product-card__title {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(81, 80, 118, 1);
+    margin-bottom: 12px;
+}
+
+.product-card__description {
+    color: rgba(81, 80, 118, 0.8);
+    font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.product-card__compound-label {
+    color: rgba(81, 80, 118, 0.8);
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.product-card__composition {
+    color: rgba(81, 80, 118, 0.7);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+
+.product-card__composition > li {
+    margin: 4px 0;
+}
+
+/* Стоимость внизу */
+.product-card__price-block {
+    margin-top: auto; /* Прижимает к низу */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(81, 80, 118, 0.05); /* Легкое разделение */
+}
+
+.product-card__price-text {
+    color: rgba(81, 80, 118, 0.4);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.product-card__price-value {
+    color: rgba(81, 80, 118, 1);
+    font-weight: 700;
+    font-size: 18px;
+}
