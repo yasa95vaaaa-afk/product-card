@@ -1,4 +1,3 @@
-
 const STORAGE_KEY = 'users_data';
 const JSON_URL = 'data.json'; 
 
@@ -7,7 +6,8 @@ const cardsContainer = document.getElementById('cardsContainer');
 const getAllBtn = document.getElementById('getAllBtn');
 const deleteAllBtn = document.getElementById('deleteAllBtn');
 
-let currentUsers = [];
+let currentUsers = []; 
+let allUsers = [];     
 
 function setStatus(text, type = '') {
   statusMessage.textContent = text;
@@ -68,7 +68,6 @@ function fetchUsersFromServer() {
   setStatus('Данные загружаются...');
   cardsContainer.textContent = '';
 
-  
   setTimeout(async function() {
     try {
       const response = await fetch(JSON_URL);
@@ -84,6 +83,8 @@ function fetchUsersFromServer() {
       }
 
       setStatus('');
+      
+      allUsers = data.users; 
       syncAndRender(data.users); 
     } catch (error) {
       console.error(error);
@@ -100,7 +101,6 @@ function deleteUserById(id) {
   syncAndRender(updatedUsers);
 }
 
-// УДАЛИТЬ ВСЕ КАРТОЧКИ
 deleteAllBtn.addEventListener('click', function() {
   if (currentUsers.length === 0) {
     setStatus('Удалять нечего — список уже пуст', 'info');
@@ -109,10 +109,8 @@ deleteAllBtn.addEventListener('click', function() {
   syncAndRender([]);
 });
 
-
 getAllBtn.addEventListener('click', function() {
-  
-  if (currentUsers.length > 0) {
+  if (allUsers.length > 0) {
     setStatus('Все карточки уже отображены', 'info');
     return;
   }
@@ -126,14 +124,16 @@ function init() {
   if (savedData !== null) {
     try {
       const parsedUsers = JSON.parse(savedData);
+      
+      currentUsers = parsedUsers;
+      allUsers = parsedUsers; 
+
       renderCards(parsedUsers);
     } catch (e) {
-      
       console.warn('Данные в localStorage повреждены, загружаем заново.');
       fetchUsersFromServer();
     }
   } else {
-  
     fetchUsersFromServer();
   }
 }
